@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	--display-font: 'Fraunces', 'Times New Roman', serif;
+	--body-font: 'Space Grotesk', 'Segoe UI', sans-serif;
+	--ink-900: #0f172a;
+	--ink-800: #1f2937;
+	--ink-600: #475569;
+	--ink-500: #64748b;
+	--ink-50: #f8fafc;
+	--accent-500: #ff7846;
+	--danger-500: #ef4444;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: var(--body-font);
+	background: radial-gradient(circle at top, #fff3e8 0%, #f6f2f0 45%, #eaf1f6 100%);
+	color: var(--ink-900);
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}

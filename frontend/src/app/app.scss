@@ -1,0 +1,251 @@
+.app-shell {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 32px clamp(20px, 5vw, 64px) 64px;
+	color: var(--ink-900);
+}
+
+.app-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	align-items: flex-start;
+}
+
+.brand {
+	max-width: 560px;
+}
+
+.eyebrow {
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	font-size: 12px;
+	color: var(--ink-600);
+	margin-bottom: 8px;
+}
+
+.brand h1 {
+	font-family: var(--display-font);
+	font-size: clamp(28px, 5vw, 48px);
+	margin: 0 0 8px;
+}
+
+.tagline {
+	font-size: 16px;
+	color: var(--ink-600);
+}
+
+.header-actions {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.btn {
+	border: none;
+	padding: 10px 16px;
+	border-radius: 999px;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 14px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.btn.primary {
+	background: var(--accent-500);
+	color: var(--ink-50);
+	box-shadow: 0 10px 24px rgba(255, 120, 70, 0.35);
+}
+
+.btn.ghost {
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	color: var(--ink-800);
+}
+
+.btn.danger {
+	background: var(--danger-500);
+	color: var(--ink-50);
+}
+
+.btn.text {
+	background: transparent;
+	color: var(--ink-500);
+	padding: 6px 8px;
+}
+
+.btn:hover:not(:disabled) {
+	transform: translateY(-1px);
+	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.status {
+	padding: 12px 16px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.main-grid {
+	display: grid;
+	grid-template-columns: minmax(280px, 1fr) minmax(360px, 2fr);
+	gap: 24px;
+}
+
+.panel {
+	background: rgba(255, 255, 255, 0.85);
+	border-radius: 24px;
+	padding: 20px;
+	box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+	border: 1px solid rgba(15, 23, 42, 0.05);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-height: 320px;
+}
+
+.panel-header h2 {
+	margin: 0;
+	font-family: var(--display-font);
+	font-size: 22px;
+}
+
+.panel-header p {
+	margin: 6px 0 0;
+	color: var(--ink-600);
+}
+
+.account-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.account-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.account-card {
+	flex: 1;
+	text-align: left;
+	background: rgba(247, 246, 243, 0.9);
+	border: 1px solid transparent;
+	border-radius: 16px;
+	padding: 14px 16px;
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.account-card.active {
+	border-color: rgba(255, 120, 70, 0.7);
+	background: rgba(255, 240, 230, 0.9);
+}
+
+.account-name {
+	margin: 0;
+	font-weight: 600;
+}
+
+.account-email {
+	margin: 4px 0 0;
+	color: var(--ink-600);
+	font-size: 13px;
+}
+
+.account-meta {
+	text-align: right;
+	font-size: 12px;
+	color: var(--ink-600);
+}
+
+.account-chip {
+	align-self: flex-start;
+	padding: 4px 8px;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.08);
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.target-select {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.target-select select {
+	padding: 10px 12px;
+	border-radius: 12px;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	background: white;
+}
+
+.file-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.file-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 16px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.file-name {
+	margin: 0;
+	font-weight: 600;
+}
+
+.file-meta {
+	margin: 4px 0 0;
+	font-size: 12px;
+	color: var(--ink-600);
+}
+
+.file-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.empty {
+	padding: 16px;
+	border-radius: 16px;
+	background: rgba(15, 23, 42, 0.03);
+	color: var(--ink-600);
+}
+
+.transfer-status {
+	font-size: 13px;
+	color: var(--ink-600);
+}
+
+@media (max-width: 900px) {
+	.app-header {
+		flex-direction: column;
+	}
+
+	.main-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.account-item {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
